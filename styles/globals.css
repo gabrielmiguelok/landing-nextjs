@@ -1,0 +1,187 @@
+/* styles/globals.css */
+
+/* Importaciones de estilos de terceros */
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+/* ---------------------------------------------------------
+   VARIABLES GLOBALES (Basadas en el diseño original del theme)
+   Mantener una única fuente de verdad (SSOT)
+   --------------------------------------------------------- */
+:root {
+  /* Paleta de colores principal */
+  --color-primary-main: #124ed9;
+  --color-primary-light: #128df3;
+  --color-primary-dark: #181a20;
+  --color-primary-contrast: #f8f9fc;
+
+  --color-secondary-main: #3fb395;
+  --color-secondary-light: #faca63;
+  --color-secondary-dark: #f2432e;
+  --color-secondary-contrast: #181a20;
+
+  --color-background-default: #f8f9fc;
+  --color-background-paper: #ffffff;
+  --color-text-primary: #181a20;
+  --color-text-secondary: #afafaf;
+  --color-info-main: #128df3;
+  --color-warning-main: #faca63;
+  --color-error-main: #f2432e;
+  --color-success-main: #3fb395;
+  --color-divider: #dddddd;
+
+  /* Tipografías */
+  --font-family-base: 'Work Sans', Arial, sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  /* Tamaños de fuente escalables */
+  --font-size-h1: 3.5rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2.5rem;
+  --font-size-h4: 2rem;
+  --font-size-h5: 1.75rem;
+  --font-size-h6: 1.5rem;
+  --font-size-subtitle1: 1.25rem;
+  --font-size-subtitle2: 1.1rem;
+  --font-size-body1: 1rem;
+  --font-size-body2: 0.9rem;
+  --font-size-button: 1rem;
+
+  /* Otros estilos globales */
+  --border-radius-base: 0;
+  --transition-base: all 0.3s ease;
+  --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* Breakpoints simples (puedes ajustarlos según necesidad) */
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 960px;
+  --breakpoint-lg: 1280px;
+}
+
+/* ---------------------------------------------------------
+   RESET BÁSICO
+   --------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   ESTILOS GLOBALES Y TIPOGRAFÍA
+   --------------------------------------------------------- */
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background-default);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-family-base);
+}
+
+/* Titulares */
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-main);
+}
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-primary-main);
+}
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-main);
+}
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+}
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+}
+
+/* Subtítulos */
+.subtitle1 {
+  font-size: var(--font-size-subtitle1);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+}
+.subtitle2 {
+  font-size: var(--font-size-subtitle2);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+}
+
+/* Cuerpos de texto */
+.body1 {
+  font-size: var(--font-size-body1);
+  color: var(--color-text-secondary);
+}
+.body2 {
+  font-size: var(--font-size-body2);
+  color: var(--color-text-secondary);
+}
+
+/* Botones generales */
+.button {
+  text-transform: none;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-button);
+  border-radius: var(--border-radius-base);
+  transition: var(--transition-base);
+}
+
+/* Layout / Grid */
+.layout {
+  position: relative;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+}
+
+.react-grid-item.resizing {
+  z-index: 1;
+}
+
+.react-grid-placeholder {
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+  transition-duration: 100ms;
+  z-index: 2;
+}
+
+/* Media Queries simples */
+@media (max-width: var(--breakpoint-sm)) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 2rem; }
+  h4 { font-size: 1.75rem; }
+  h5 { font-size: 1.5rem; }
+  h6 { font-size: 1.25rem; }
+}
